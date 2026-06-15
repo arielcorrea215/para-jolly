@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para ti ❤️</title>
+
+<style>
+body{
+  margin:0;
+  overflow:hidden;
+  font-family: Georgia, serif;
+}
+
+/* Fondo romántico elegante */
+.scene{
+  height:100vh;
+  width:100vw;
+  overflow:hidden;
+  position:relative;
+
+  background:
+  radial-gradient(circle at 50% 15%,
+  rgba(255,120,160,.12),
+  transparent 22%),
+
+  radial-gradient(circle at bottom,
+  rgba(255,90,120,.08),
+  transparent 30%),
+
+  linear-gradient(
+    180deg,
+    #09040b 0%,
+    #1b0d22 35%,
+    #31133a 70%,
+    #4c1c47 100%
+  );
+}
+
+/* estrellas suaves */
+.scene::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-image:
+  radial-gradient(circle, rgba(255,255,255,.12) 1px, transparent 1px);
+  background-size:90px 90px;
+  opacity:.22;
+  animation:sparkle 20s linear infinite;
+}
+
+@keyframes sparkle{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(50px);
+  }
+}
+
+/* elementos flotantes */
+.shape{
+  position:absolute;
+  will-change:transform;
+}
+
+/* corazones */
+.shape__leaf{
+  fill:#d97b98;
+  opacity:.22;
+}
+
+/* flores rosadas elegantes */
+.shape__flower{
+  fill:#b76e79;
+  opacity:.28;
+}
+
+/* mensaje */
+.mensaje{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  z-index:999999;
+
+  width:75%;
+  max-width:620px;
+  padding:20px;
+
+  animation:aparecer 2s ease;
+}
+
+@keyframes aparecer{
+  from{
+    opacity:0;
+    transform:translate(-50%,-45%);
+  }
+  to{
+    opacity:1;
+    transform:translate(-50%,-50%);
+  }
+}
+
+/* dragoncito */
+.dragon{
+  font-size:28px;
+  margin-bottom:14px;
+  opacity:.9;
+  animation:dragonFloat 4s ease-in-out infinite;
+}
+
+@keyframes dragonFloat{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-7px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+/* título */
+.mensaje h1{
+  color:#ffe6ec;
+  font-size:36px;
+  font-weight:400;
+  letter-spacing:3px;
+  margin-bottom:20px;
+
+  text-shadow:
+    0 0 12px rgba(255,180,200,.25),
+    0 0 25px rgba(0,0,0,.35);
+}
+
+/* texto */
+.mensaje p{
+  color:rgba(255,255,255,.96);
+  font-size:21px;
+  line-height:2;
+  letter-spacing:.3px;
+
+  text-shadow:
+    0 0 10px rgba(0,0,0,.65),
+    0 2px 10px rgba(0,0,0,.35);
+}
+
+/* aparición suave */
+.typing{
+  animation:fadeText 3s ease;
+}
+
+@keyframes fadeText{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="scene js-scene">
+
+  <div class="shape shape__leaf js-leaf">
+    <svg viewBox="0 0 100 100">
+      <g>
+        <path d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="shape shape__flower js-flower">
+    <svg viewBox="0 0 1000 1000">
+      <g>
+        <path d="M987.3,479.3c-9.1-56.2-44-91.9-104.8-107.1c-75.9-18.2-170.1,4.6-282.5,68.4C741.2,360,810.3,274.2,807.3,183.1c0-56.2-25.1-94.9-75.2-116.2c-56.2-24.3-107.8-10.6-154.9,41c-51.6,56.2-77.5,148.1-77.5,275.7c0-164-40.3-267.3-120.8-309.9c-51.6-28.9-99.5-24.3-143.5,13.7c-48.6,41-58.5,95.7-29.6,164s93.4,131.4,193.7,189.1C259.7,360,151.1,343.3,73.6,390.4C23.5,420.8,3,463.3,12.1,518c7.6,56.2,41.8,92.7,102.5,109.4c75.9,19.7,170.9-3,284.8-68.4c-141.3,82-210.4,168.6-207.3,259.7c3,56.2,30.4,94.9,82,116.2c57.7,22.8,109.4,6.8,154.9-47.8c25.8-31.9,44-74.4,54.7-127.6h29.6c21.3,104.8,67.6,164.8,139,180c53.2,12.2,95.7-3.8,127.6-47.8c42.5-57.7,36.5-123.8-18.2-198.2C725.3,644.8,671.3,600,599.9,559c139.7,80.5,248.4,97.2,325.8,50.1C977.4,578.8,997.9,535.5,987.3,479.3z"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="mensaje">
+    <div class="dragon">🐉 🌙</div>
+
+    <h1>Mulata de mi vida</h1>
+
+    <p class="typing">
+      Te quiero mucho ❤️<br>
+      Aunque a veces no nos entendamos,<br>
+      siempre te voy a querer<br>
+      y cada día lo hare más.
+    </p>
+  </div>
+
+</div>
+
+<script>
+(() => {
+  const SHAPE_COUNT = 90;
+  const viewportWidth = window.innerWidth;
+
+  const scene = document.querySelector('.js-scene');
+  const leaf = document.querySelector('.js-leaf');
+  const flower = document.querySelector('.js-flower');
+
+  const randomX = () => Math.random() * viewportWidth;
+  const randomRotate = () => Math.random() * 360;
+  const randomDuration = () => Math.random() * 6000 + 7000;
+
+  const createShape = (template) => {
+    const el = template.cloneNode(true);
+
+    el.style.position = "absolute";
+    el.style.left = `${randomX()}px`;
+    el.style.top = "-100px";
+    el.style.opacity = Math.random() * 0.4 + 0.2;
+    el.style.width = `${Math.random() * 35 + 25}px`;
+
+    scene.appendChild(el);
+
+    el.animate(
+      [
+        {
+          transform: `translateY(-100px) rotate(0deg)`
+        },
+        {
+          transform: `translateY(120vh)
+          translateX(${Math.random() * 140 - 70}px)
+          rotate(${randomRotate()}deg)`
+        }
+      ],
+      {
+        duration: randomDuration(),
+        iterations: Infinity,
+        easing: "linear",
+        delay: Math.random() * 5000
+      }
+    );
+  };
+
+  for(let i = 0; i < SHAPE_COUNT / 2; i++){
+    createShape(leaf);
+    createShape(flower);
+  }
+})();
+</script>
+
+</body>
+</html>
